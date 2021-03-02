@@ -29,7 +29,7 @@ namespace Bankmanagement
         }
         public void AddAccount(Account account)
         {
-            for (int i = 0; i < MyBank.Length; i++)
+            for (int i = 1; i < MyBank.Length; i++)
             {
                 if (MyBank[i] == null)
                 {
@@ -43,7 +43,7 @@ namespace Bankmanagement
 
         public void DeleteAccount(int accountNumber)
         {
-            for (int i = 1; i >=MyBank.Length; i++)
+            for (int i = 0; i <MyBank.Length; i++)
             {
                 if (MyBank[i]== MyBank[accountNumber])
                 {
@@ -88,10 +88,10 @@ namespace Bankmanagement
 
                     else if (transactionType == 3)
                     {
-                        Console.WriteLine("Enter amount and revceiver id");
-                        amount = Convert.ToInt32(Console.ReadLine());
-                        receiver = Convert.ToInt32(Console.ReadLine());
-                        //MyBank[accountnumber].Transfer(amount, receiver);
+                        //Console.WriteLine("Enter amount and revceiver id");
+                        //amount = Convert.ToInt32(Console.ReadLine());
+                        //receiver = Convert.ToInt32(Console.ReadLine());
+                        ////MyBank[accountnumber].Transfer(amount, receiver);
                     }
 
                     else

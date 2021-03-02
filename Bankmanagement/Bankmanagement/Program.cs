@@ -15,15 +15,17 @@ namespace Bankmanagement
             mB.AddAccount(new Account("akib", 5000, new Address("21", "10", "dhaka", "bangla")));
             mB.AddAccount(new Account("anik", 4000, new Address("45", "1220", "dhaka", "bangla")));
             mB.PrintAccountDetailes();
-            // mB.DeleteAccount(1);
-            // mB.PrintAccountDetail
-           Console.WriteLine("Enter 1 for withdraw");
-            Console.WriteLine("Enter 2 for deposit");
-            Console.WriteLine("Enter 3 for transfer");
-            choice = Convert.ToInt32(Console.ReadLine());
-            mB.Transaction(choice);
+            //mB.DeleteAccount(1);
+            //mB.DeleteAccount(2);
 
-            mB.PrintAccountDetailes();
+            // mB.PrintAccountDetail
+            //Console.WriteLine("Enter 1 for withdraw");
+            //Console.WriteLine("Enter 2 for deposit");
+            //Console.WriteLine("Enter 3 for transfer");
+            //choice = Convert.ToInt32(Console.ReadLine());
+            //mB.Transaction(choice);
+
+            //mB.PrintAccountDetailes();
             Console.ReadKey();
             
         }
