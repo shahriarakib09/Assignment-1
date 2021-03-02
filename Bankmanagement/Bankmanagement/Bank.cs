@@ -39,17 +39,22 @@ namespace Bankmanagement
             }
         }
 
-        public void DeleteAccount(int AccountNumber)
+        public void DeleteAccount(int accountNumber)
         {
             for(int i=0;i<MyBank.Length;i++)
             {
-                if()
+                if (MyBank[i].AccountNumber == accountNumber)
+                {
+                    MyBank[i]= null; 
+                }
 
             }
 
         }
         public void Transection(int transectionType)
-        { }
+        {
+
+        }
 
 
         public void PrintAccountDetailes()

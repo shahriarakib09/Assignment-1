@@ -10,7 +10,7 @@ namespace Bankmanagement
     {
         static void Main(string[] args)
         {
-            Address address = new Address("21", "14", "Dhaka", "Bangladesh");
+            Address address = new Address();
             Console.WriteLine(address.GetAddress());
             Console.ReadKey();
         }
