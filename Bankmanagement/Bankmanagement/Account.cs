@@ -8,24 +8,26 @@ namespace Bankmanagement
 {
     class Account
     {
-        private int accountNumber ;
+        private int accountNumber= 1 ;
+        private static int myaccountNumber;
         private string accountName;
         private Double balance;
         private Address address;
 
-        public Account(int accountNumber, string accountName, double balance, Address address)
+        public Account(string accountName, double balance, Address address)
         {
-            this.AccountNumber = accountNumber;
+            accountNumber = ++myaccountNumber;
             this.AccountName = accountName;
             this.Balance = balance;
             this.Address = address;
         }
-        public int AccountNumber
-        {
-            
-            set { this.accountNumber = value; }
-            get { return this.accountNumber; }
-        }
+        //public int AccountNumber
+        //{
+        //    int i = 0;
+
+        //    set { this.accountNumber = value; }
+        //    get { return this.accountNumber; }
+        //}
         public String AccountName
         {
             set { this.accountName = value; }
@@ -50,6 +52,8 @@ namespace Bankmanagement
             if(this.Balance-amount>=500)
             {
                 this.Balance = this.Balance - amount;
+                Console.WriteLine("Withdraw successful");
+
             }
             else
             {
@@ -59,6 +63,8 @@ namespace Bankmanagement
         public void Deposit(double amount)
         {
             this.Balance = this.Balance + amount;
+            Console.WriteLine("Deposited successfully");
+
         }
         public void Transfer(double amount,Account receiver )
         {
@@ -68,9 +74,10 @@ namespace Bankmanagement
         }
        public void ShowAccountInformation()
         {
-            Console.WriteLine("Account No:{0}\nAccount Name:{1}\nBalance:{2}", this.accountNumber, this.accountName, this.balance);
-            this.Address.GetAddress();
+            Console.WriteLine("Account No:{0}\nAccount Name:{1}\nBalance:{2}", accountNumber, this.accountName, this.balance);
+            Console.WriteLine(this.Address.GetAddress());
         }
+
         
-         }
+    }
 }

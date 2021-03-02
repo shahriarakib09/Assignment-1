@@ -10,9 +10,27 @@ namespace Bankmanagement
     {
         static void Main(string[] args)
         {
-            Address address = new Address();
-            Console.WriteLine(address.GetAddress());
+            int choice;
+            Bank mB = new Bank("MY bank", 100);
+            mB.AddAccount(new Account("akib", 5000, new Address("21", "10", "dhaka", "bangla")));
+            mB.AddAccount(new Account("anik", 4000, new Address("45", "1220", "dhaka", "bangla")));
+            mB.PrintAccountDetailes();
+            // mB.DeleteAccount(1);
+            // mB.PrintAccountDetail
+           Console.WriteLine("Enter 1 for withdraw");
+            Console.WriteLine("Enter 2 for deposit");
+            Console.WriteLine("Enter 3 for transfer");
+            choice = Convert.ToInt32(Console.ReadLine());
+            mB.Transaction(choice);
+
+            mB.PrintAccountDetailes();
             Console.ReadKey();
+            
         }
+        //    Address address = new Address();
+        //    Console.WriteLine(address.GetAddress());
+        //    Console.ReadKey();
+        //}
+
     }
 }
